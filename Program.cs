@@ -6,8 +6,7 @@ namespace KnightScythe
     {
 		static void Main(string[] args)
 		{
-			var ship = new Battleship(5, 0, 0, 0);
-			var ship2 = new Battleship(2, 0, 2, 2);
+			Console.Title = "KnightScythe: Battleship in C#";
 			CPU cpu, cpu2;
 			var playerField = new Field("Player's Board", true);
 			Console.Write("Will you play against the computer, or will it play itself? (1/0 Players): ");
@@ -76,6 +75,8 @@ namespace KnightScythe
 			cpu.Field.DisplayField(40);
 			Console.WriteLine(p1LastTurn);
 			Console.WriteLine(p2LastTurn);*/
+
+			Console.WriteLine($"Game over! Winner: " + (p1LastTurn.Contains("Game Over!") ? "Player 1!" : "Player 2!"));
 			Console.ReadKey();
 		}
 	}
